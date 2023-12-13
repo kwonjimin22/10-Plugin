@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>swiper.js 기본 적용</title>
+
+    <!-- 1. 플러그인 필수 파일 불러오기 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 3. 우리 스크립트 붙이기 -->
+    <script src="./js/script.js" defer></script>
+    <!-- defer : dom이 로딩되면 소스코드실행하는 속성(신규) -->
+  </head>
+  <body>
+    <!-- 2. 필요한 HTML구조 (복사해서)작성하기 -->
+    <!-- Slider main container -->
+    <div class="swiper top-slider">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- 두번째 슬라이더 -->
+    <!-- 슬라이더가 여러개일 때 어떻게 개별로 구분하나, 클래스 하나 더 주기 -->
+    <div class="swiper bottom-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+      </div>
+
+      <div class="btn btn-prev">prev</div>
+      <div class="btn btn-next">next</div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </body>
+</html>
