@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+body {
+  font: 14px/1 sans-serif;
+  color: #666;
+  overflow-x: hidden;
+}
+
+.inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  height: 100px;
+  line-height: 100px;
+  background: #f55;
+  color: #fff;
+  text-align: center;
+}
+main {
+  min-height: 400px;
+}
+footer {
+  height: 70px;
+  line-height: 70px;
+  background: #444;
+  color: #fff;
+  text-align: center;
+}
+
+.contents {
+  padding: 5% 0;
+}
+
+.btn-prev,
+.btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.btn-prev {
+  left: 40px;
+}
+.btn-next {
+  right: 40px;
+}
+
+/* swiper */
+/* .swiper-slide img{max-width:100%;} */
+.swiper-pagination-bullet {
+  background: #fff;
+}
+.swiper-pagination-bullet-active {
+  background: #f39;
+}
+
+.swiper-container-horizontal > .swiper-pagination-progressbar,
+.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  height: 10px;
+}
+:root {
+  --swiper-theme-color: #0f0;
+}
+
+.swiper-slide {
+  position: relative;
+}
+.text-box {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  opacity: 0;
+}
+
+.slider2 img {
+  max-width: 100%;
+}
+
+.slider1 {
+  border: 1px solid #000;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.slider2 {
+  border: 1px solid #00f;
+  padding-top: 50px;
+  position: relative;
+}
+.slider2 .swiper-pagination {
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: #f5f;
+  height: 30px;
+}
+.slider2 .swiper-slide {
+  border: 1px solid #f00;
+}
+
+.slider2-nav {
+  margin-top: 50px;
+}
+
+.slider2-nav .swiper-slide {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #000;
+}

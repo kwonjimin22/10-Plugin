@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG-vivus.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+    <style>
+      .ex {
+        transform-origin: 50% 50%; /* trfo : 중심점 바꾸기 */
+        transition: 0.4s;
+      }
+      .box {
+        width: 800px;
+        border: 1px solid #000;
+        margin: 0 auto;
+      }
+      .box2 {
+        width: 800px;
+        border: 1px solid #000;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- vivus.js -->
+    <!-- https://jakearchibald.github.io/svgomg/ -->
+    <img src="./test.svg" alt="" />
+    <div class="box">
+      <svg id="myTest2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 298 298">
+        <circle cx="149" cy="149" r="148" stroke="#000" stroke-width="2" />
+        <circle cx="149" cy="149" r="133" stroke="#000" stroke-width="2" />
+        <circle cx="149" cy="149" r="115" stroke="#000" stroke-width="2" />
+        <circle cx="149" cy="149" r="93" stroke="#000" stroke-width="4" />
+        <path
+          class="ex"
+          stroke="#000"
+          stroke-linecap="round"
+          stroke-width="4"
+          d="M112.828 115 183 185.172M180.172 115 110 185.172"
+        />
+      </svg>
+    </div>
+
+    <div class="box2">
+      <svg id="myName" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1385 504">
+        <path
+          stroke="#333"
+          stroke-linecap="round"
+          stroke-width="23"
+          d="M337.088 38.84c-15.946 2.278-30.143 19.121-41.227 29.18-59.238 53.758-119.067 106.873-178.293 160.625-21.476 19.491-56.302 43.125-64.786 72.816M192.526 176.174c10.005.715 18.669 5.287 27.172 10.441 21.443 12.996 41.445 27.702 63.313 40.156 24.954 14.212 45.912 32.795 66.123 53.006M11.823 424.339H445.51M592.48 72.572c62.666 0 125.282 2.41 187.931 2.41"
+        />
+        <path
+          stroke="#333"
+          stroke-linecap="round"
+          stroke-width="23"
+          d="M609.346 70.162c-8.042 23.231-11.429 47.225-16.866 71.21-9.555 42.158-19.199 87.544-21.416 130.775-.918 17.902-5.743 48.306 1.606 65.455 3.577 8.346 8.395 11.303 17.535 11.913 47.023 3.135 96.103-13.049 137.2-33.598 12.316-6.158 25.61-12.49 39.353-14.322 6.653-.887 10.156-5.393 16.062-7.362"
+        />
+        <path
+          stroke="#333"
+          stroke-linecap="round"
+          stroke-width="23"
+          d="M565.977 207.496c79.556 0 159 2.409 238.528 2.409M910.517 12.337c-23.293 148.078-39.404 296.986-57.825 445.733M1086.4 74.981c1.98-2.641 5.88-2.142 8.83-2.142 19.14 0 38.45 1.485 57.56 2.276 22.53.932 44.82 3.08 67.2 5.756 7.48.895 16.31.903 23.02 4.818 20.75 12.103 14.81 42.151 14.46 62.912-.97 56.869-22.63 110.164-28.65 165.844-1.45 13.46-5.09 29.277-5.09 42.432"
+        />
+        <path
+          stroke="#333"
+          stroke-linecap="round"
+          stroke-width="23"
+          d="M1112.9 224.362c65.33 0 131.3 3.126 196.5-.134 13.09-.655 26.38-5.77 39.62-7.094M1373.12 41.25c0 99.476-11.71 200.404-23.3 299.029-3.93 33.499-14.3 65.349-20.88 98.249-3.55 17.753-4.42 35.63-8.83 53.274"
+        />
+      </svg>
+    </div>
+
+    <script>
+      new Vivus(
+        'myTest2',
+        {
+          duration: 300,
+          type: 'oneByOne',
+          animTimingFunction: Vivus.EASE_OUT,
+        },
+        function () {
+          document.querySelector('.ex').style.transform = 'rotate(360deg)';
+        }
+      );
+
+      new Vivus('myName', {
+        duration: 300,
+        type: 'oneByOne',
+        animTimingFunction: Vivus.EASE_OUT,
+      });
+    </script>
+  </body>
+</html>

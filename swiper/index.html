@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>swiper 기본적용</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="inner"><h1>header</h1></div>
+    </header>
+    <main>
+      <section class="visual-wrap">
+        <!-- swiper -->
+        <!-- Slider main container -->
+        <div class="swiper-container slider1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="images/main-visual01.jpg" alt="1" />
+              <div class="text-box">
+                <h2>Slide 1</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic aliquid veniam temporibus dolorem ut
+                  sapiente officia inventore officiis provident assumenda id delectus quibusdam odio ad est numquam
+                  expedita, illum itaque.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/main-visual02.jpg" alt="2" />
+              <div class="text-box">
+                <h2>Slide 2</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic aliquid veniam temporibus dolorem ut
+                  sapiente officia inventore officiis provident assumenda id delectus quibusdam odio ad est numquam
+                  expedita, illum itaque.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/main-visual03.jpg" alt="3" />
+              <div class="text-box">
+                <h2>Slide 3</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic aliquid veniam temporibus dolorem ut
+                  sapiente officia inventore officiis provident assumenda id delectus quibusdam odio ad est numquam
+                  expedita, illum itaque.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/main-visual04.jpg" alt="4" />
+              <div class="text-box">
+                <h2>Slide 4</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic aliquid veniam temporibus dolorem ut
+                  sapiente officia inventore officiis provident assumenda id delectus quibusdam odio ad est numquam
+                  expedita, illum itaque.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-prev">이전</a>
+          <a href="#" class="btn-next">다음</a>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="contents">
+        <div class="inner">
+          <h2>Section Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ipsum fuga itaque explicabo similique ullam
+            deserunt id dolores excepturi rem culpa delectus facilis impedit consectetur autem commodi possimus porro!
+            Vero.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="swiper-container slider2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/best1.jpg" alt="1" /></div>
+            <div class="swiper-slide"><img src="images/best2.jpg" alt="2" /></div>
+            <div class="swiper-slide"><img src="images/best3.jpg" alt="3" /></div>
+            <div class="swiper-slide"><img src="images/best4.jpg" alt="4" /></div>
+            <div class="swiper-slide"><img src="images/best5.jpg" alt="5" /></div>
+            <div class="swiper-slide"><img src="images/best6.jpg" alt="6" /></div>
+          </div>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper-container slider2-nav">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="inner">&copy moodang-teacher.com</div>
+    </footer>
+
+    <script>
+      const slider1 = new Swiper('.slider1', {
+        // Optional parameters
+        // direction: 'vertical',
+        autoplay: true,
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.btn-next',
+          prevEl: '.btn-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+
+      const slider2 = new Swiper('.slider2', {
+        // Optional parameters
+        // direction: 'vertical',
+        autoplay: true,
+        loop: true,
+        // slidesPerView: 4 /* 한번에 보여질 슬라이드 갯수 */,
+        // spaceBetween: 30,
+        breakpoints: {
+          // 작은 사이즈부터 큰 사이즈까지 (min-width 개념으로 동작)
+          //   320: { slidesPerView: 1, spaceBetween: 0 },
+          //   480: { slidesPerView: 2, spaceBetween: 20 },
+          //   760: { slidesPerView: 4, spaceBetween: 30 },
+        },
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+
+      const slider2Nav = new Swiper('.slider2-nav', {
+        autoplay: true,
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slideToClickedSlide: true, //슬라이드에 클릭이 가능
+      });
+
+      slider2.controller.control = slider2Nav;
+      slider2Nav.controller.control = slider2;
+    </script>
+  </body>
+</html>

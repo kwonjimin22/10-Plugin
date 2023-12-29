@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprite Image - CSS Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .bird {
+        /* 그림 한장의 크기 */
+        width: 394px;
+        height: 293px;
+        border: 1px solid #000;
+        background: url(./img/bird.png) no-repeat 0 0;
+
+        animation: flying-bird 1s infinite steps(2); /* 가지고 있는 이미지 갯수 */
+      }
+
+      @keyframes flying-bird {
+        to {
+          background-position: -788px 0; /* 이미지 전체의 크기 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bird"></div>
+  </body>
+</html>
